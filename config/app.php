@@ -1,11 +1,11 @@
 <?php
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/../");
-$dotenv->load();
+$dotenv->safeLoad();
 
 /**
  * Base URL
  */
 
-define('BASEURL', $_ENV['APP_URL'] ?: 'http://localhost/witch_saga_app/public');
+define('BASEURL', isset($_ENV['APP_URL']) ? $_ENV['APP_URL'] : 'https://witch-saga-agus.herokuapp.com/');
 
