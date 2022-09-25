@@ -1,9 +1,12 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
 
-Options -Multiviews
+    RewriteEngine On
 
-RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-
-RewriteRule ^(.*)$ index.php?url=$1 [L,QSA,NC]
+    RewriteRule ^(.*)$ index.php?url=$1 [L,QSA,NC]
+</IfModule>
