@@ -3,7 +3,8 @@
     "description": "Geekseat Witch Saga: Return of The Coder!",
     "type": "project",
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "vlucas/phpdotenv": "^5.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
@@ -26,5 +27,10 @@
             "name": "Agus Trisaputra",
             "email": "agustrisaputra21@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
 }
