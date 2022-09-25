@@ -28,7 +28,7 @@
             }
         ?>
 
-        <form method="post" action="<?php echo BASEURL . "/home/store"; ?>">
+        <form method="post" action="<?php echo BASEURL . "/"; ?>">
             <div class="card">
                 <div class="card-header">
                     <h6>Person 1</h6>

@@ -9,6 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
+        if (request('persons')) {
+            $this->store();
+        }
+
         return $this->view('home');
     }
 
