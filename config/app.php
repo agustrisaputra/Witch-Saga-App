@@ -7,5 +7,5 @@ $dotenv->safeLoad();
  * Base URL
  */
 
-define('BASEURL', isset($_ENV['APP_URL']) ? $_ENV['APP_URL'] : 'https://witch-saga-agus.herokuapp.com/');
+define('BASEURL', isset($_ENV['APP_URL']) ? $_ENV['APP_URL'] : 'https://witch-saga-agus.herokuapp.com');
 
