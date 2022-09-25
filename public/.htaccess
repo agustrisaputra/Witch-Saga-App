@@ -9,5 +9,5 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
 
-    RewriteRule ^(.*)$ index.php?url=$1 [L,QSA,NC]
+    RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 </IfModule>
